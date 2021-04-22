@@ -102,6 +102,7 @@
 \fi
 
 \ifthss@opt@pkufont
+    % 将西文字体改为类似于Times New Roman / Arial 的字体
 	% Use Times New Roman / Arial according to school regulation.
 	% Option used to prevent newtxtext from manipulating footnote marks.
 	\RequirePackage[defaultsups]{newtxtext}
@@ -279,23 +280,18 @@
 	subsubsection =
 		{beforeskip = {12bp plus 1ex minus 0.2ex}, afterskip = {5bp plus 0.2ex}}
 }
+
+% 设置标题字号
 \ctexset{
-	chapter = {nameformat = {}, titleformat = {}},
+	% 二号、黑体、居中
+	chapter = {format = {\zihao{2}\heiti\centering}},
+	% 三号、宋体/Time new roman、加粗
+	section = {format = {\zihao{3}\bfseries}},
+	% 四号，宋体/Time new roman，加粗
+	subsection = {format = {\zihao{4}\bfseries}},
+	% 小四，宋体/Time new roman，加粗
 	subsubsection = {format = {\zihao{-4}\bfseries}}
 }
-\ifthss@opt@ugly
-	\ctexset{
-		chapter = {format = {\zihao{3}\bfseries\centering}},
-		section = {format = {\zihao{4}\bfseries}},
-		subsection = {format = {\fontsize{13bp}{15.6bp}\selectfont\bfseries}}
-	}
-\else
-	\ctexset{
-		chapter = {format = {\zihao{-2}\bfseries\centering}},
-		section = {format = {\zihao{-3}\bfseries}},
-		subsection = {format = {\zihao{4}\bfseries}}
-	}
-\fi
 
 % `\MakeUppercase' works problematically.
 % eg. it converts `\cite{ctex}' into `\cite{CTEX}'.
