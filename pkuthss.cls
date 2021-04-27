@@ -386,12 +386,16 @@
 				\thss@int@fillinblank{1}{\thss@tmp@len}{\fangsong\@cauthor}		\\
 				{\bfseries\label@studentid}	&
 				\thss@int@fillinblank{1}{\thss@tmp@len}{\fangsong\@studentid}	\\
+				% 院系
 				{\bfseries\label@school}		&
 				\thss@int@fillinblank{1}{\thss@tmp@len}{\fangsong\@school}		\\
+				% 本科专业
 				{\bfseries\label@cmajor}		&
 				\thss@int@fillinblank{1}{\thss@tmp@len}{\fangsong\@cmajor}		\\
-				{\bfseries\label@direction}	&
-				\thss@int@fillinblank{1}{\thss@tmp@len}{\fangsong\@direction}	\\
+				% 不需要填研究方向
+				%{\bfseries\label@direction}	&
+				%\thss@int@fillinblank{1}{\thss@tmp@len}{\fangsong\@direction}	\\
+				% 指导老师
 				{\bfseries\label@cmentor}		&
 				\thss@int@fillinblank{1}{\thss@tmp@len}{\fangsong\@cmentor}		\\
 			\end{tabular}%

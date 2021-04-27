@@ -10,7 +10,7 @@
 %   texdoc biblatex-caspervector
 % 调出。
 
-% 如果格式审查提示字号不严格符合标准，可以在 [] 中加入“ugly”选项。
+% 为使用单页设置，可以在 [] 加入"oneside"选项 
 \documentclass[UTF8]{pkuthss}
 % 如果的确须要使脚注按页编号的话，可以去掉后面 footmisc 包的注释。
 %\usepackage[perpage]{footmisc}
@@ -39,10 +39,10 @@
 	% 长标题可用 \thssnl 强制换行，不能用“\\”（双盲版会出错）。
 	ctitle = {测试文档},
 	etitle = {Test Document},
-	cauthor = {某某}, eauthor = {Test}, date = {某年某月},
+	cauthor = {某某}, eauthor = {Test}, date = {二〇二一年六月},
 	studentid = {0123456789}, school = {某某学院},
 	cmajor = {某某专业}, emajor = {Some Major},
-	direction = {某某方向},
+	% direction = {某某方向}, % 本科毕业无需填方向
 	cmentor = {某某教授}, ementor = {Prof.\ Somebody},
 	ckeywords = {其一，其二},
 	ekeywords = {First, Second},
