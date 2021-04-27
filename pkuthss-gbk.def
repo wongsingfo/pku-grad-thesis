@@ -46,7 +46,7 @@
 \def\titlepagename{封面}
 \def\cuniversity{北京大学}
 \def\euniversity{Peking University}
-\def\cthesisname{博士学位论文}
+\def\cthesisname{本科生毕业论文}
 \def\ethesisname{Doctor Thesis}
 \def\thesiscover{}
 \def\cabstractname{摘要}

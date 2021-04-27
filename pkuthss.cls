@@ -312,11 +312,14 @@
 \fancypagestyle{plain}{
 	\fancyhf{}\renewcommand*{\headrulewidth}{0.75bp}
 	\fancyfoot[C]{\zihao{5}\normalfont{\thepage}}
-	\if@twoside
+	
+	\iffalse 
 		\fancyhead[CE]{\zihao{5}\normalfont{\cuniversity\cthesisname}}
 		\fancyhead[CO]{\zihao{5}\normalfont\thss@int@setcase{\leftmark}}
 	\else
-		\fancyhead[C]{\zihao{5}\normalfont\thss@int@setcase{\leftmark}}
+		% 单双面使用同样的页眉
+		\fancyhead[L]{\zihao{5}\normalfont{\cuniversity\cthesisname}}
+		\fancyhead[R]{\zihao{5}\normalfont\thss@int@setcase{\leftmark}}
 	\fi
 }
 \pagestyle{plain}
