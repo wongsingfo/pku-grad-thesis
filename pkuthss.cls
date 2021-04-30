@@ -58,6 +58,9 @@
 % defined document information (author, title, etc.).
 \thss@int@boolopt{pdfprop}{true}
 % Whether to disable some infractions intended to make the style less ugly.
+% ugly 选项是 pkuthuss 作者的私货。当 ugly 为 true 时，使用的是学校要求的格式。当 ugly
+% 为 false 时，使用的是作者自定义的格式。
+% 在本科生毕业模版中，我们忽略此选项。
 \thss@int@boolopt{ugly}{false}
 % Pass all other options to `ctexbook' document class.
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
@@ -313,7 +316,7 @@
 	\fancyhf{}\renewcommand*{\headrulewidth}{0.75bp}
 	\fancyfoot[C]{\zihao{5}\normalfont{\thepage}}
 	
-	\iffalse 
+	\iffalse % 不分开考虑奇偶页
 		\fancyhead[CE]{\zihao{5}\normalfont{\cuniversity\cthesisname}}
 		\fancyhead[CO]{\zihao{5}\normalfont\thss@int@setcase{\leftmark}}
 	\else
@@ -401,8 +404,8 @@
 			\end{tabular}%
 		}
 		\vfill
-		% Date.
-		{\ifthss@opt@ugly\zihao{3}\else\zihao{-2}\fi\@date}
+		% 日期：楷体小二
+		{\zihao{-2}\kaishu\@date}
 	\par\end{titlepage}%
 }
 
