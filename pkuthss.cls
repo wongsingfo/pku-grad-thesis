@@ -355,6 +355,7 @@
 	}%
 }
 
+% 封面
 % Set up format of the title page (cover).
 \renewcommand{\maketitle}{%
 	\thss@int@pdfmark{\titlepagename}{titlepage}
@@ -362,21 +363,29 @@
 	\begin{titlepage}\centering
 		% Emblem and inscription of the university, and type of thesis.
 		{%
-			\ifthss@opt@ugly%
-				\zihao{-0}\includegraphics[height = 1.9em]{pkulogo}\hspace{0.3em}%
-				\raisebox{0.32em}{\includegraphics[height = 1.3em]{pkuword}}\\[0.5em]
-			\else%
-				\zihao{1}\includegraphics[height = 2.4em]{pkulogo}\hspace{0.4em}%
-				\raisebox{0.4em}{\includegraphics[height = 1.6em]{pkuword}}\\[0.8em]
-			\fi%
+			% 小初
+			\zihao{-0}\includegraphics[height = 1.9em]{pkulogo}\hspace{0.3em}%
+			\raisebox{0.32em}{\includegraphics[height = 1.3em]{pkuword}}\\[0.5em]
+			
 			{\bfseries\ifx\thesiscover\empty{\cthesisname}\else{\thesiscover}\fi}%
 		}
 		\vfill
 		% Title of the thesis.
 		{%
-			\ifthss@opt@ugly\zihao{-1}\else\zihao{2}\fi%
-			\linespread{1.6}\selectfont{\label@ctitle}%
-			\thss@int@fillinblank{2}{0.64\textwidth}{\textbf{\@ctitle}}%
+			{	
+				\zihao{3}\bfseries
+				\linespread{1.6}\selectfont{\label@ctitle}% 题目
+			}
+			{
+				\zihao{2}\bfseries\kaishu% 楷体二号加粗
+				\thss@int@fillinblank{1}{0.64\textwidth}
+					{\@ctitle}% troubleshoot: 楷体加粗不起作用
+			}
+			{
+				\zihao{3}\bfseries
+				\thss@int@fillinblank{1}{0.64\textwidth}
+					{\@etitle}
+			}
 		}
 		\vfill
 		% Information about the author.
