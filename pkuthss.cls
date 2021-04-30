@@ -372,16 +372,19 @@
 		\vfill
 		% Title of the thesis.
 		{%
-			{	
+			\newcommand{\titlelabel}{% 题目标签
 				\zihao{3}\bfseries
-				\linespread{1.6}\selectfont{\label@ctitle}% 题目
+				\linespread{1.6}\selectfont{\label@ctitle}
 			}
-			{
+			\titlelabel
+			{%中文标题
 				\zihao{2}\bfseries\kaishu% 楷体二号加粗
 				\thss@int@fillinblank{1}{0.64\textwidth}
 					{\@ctitle}% troubleshoot: 楷体加粗不起作用
 			}
-			{
+		    \\* \vspace{4mm}
+		    \hphantom{\titlelabel}%占位符
+			{%英文标题
 				\zihao{3}\bfseries
 				\thss@int@fillinblank{1}{0.64\textwidth}
 					{\@etitle}
