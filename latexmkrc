@@ -1,3 +1,4 @@
+# vim: set ft=perl:
 # Copyright (c) 2019 Casper Ti. Vector
 # Public domain.
 # Credit to http://ctan.math.washington.edu/tex-archive/support/latexmk/latexmk.pdf
@@ -11,7 +12,8 @@
 #    $xelatex and xdvipdfmx variables.
 $pdf_mode = 5;
 
-$xelatex = 'xelatex -synctex=1 -interaction=nonstopmode --shell-escape %O %S';
+$xelatex = 'xelatex -synctex=1 -interaction=nonstopmode --shell-escape -no-pdf %O %S';
+$xdvipdfmx = "xdvipdfmx -q -E -o %D %O %S";
 
 $bibtex_use = 1.5;
 
@@ -20,3 +22,4 @@ $biber = "biber -l zh__pinyin --output-safechars %O %S";
 # latexmk -c 时自动删除 .run.xml 文件。
 $clean_ext = "run.xml";
 
+$makeindex = "makeindex -s gind.ist %O -o %D %S";
