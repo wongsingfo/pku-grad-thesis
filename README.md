@@ -9,12 +9,21 @@
 ### MacOS
 
 1. 从 http://www.tug.org/mactex/ 下载并安装 MacTeX。
-1. 从 https://fontzone.net/ 下载并安装中文字体。所需要的字体文件有：`simsun.ttf`, `simfang.ttf`, `simhei.ttf`, `KaiTi.ttf`
-1. 运行 latexmk 进行编译。
+2. 从 https://fontzone.net/ 下载并安装中文字体。所需要的字体文件有：`simsun.ttf`, `simfang.ttf`, `simhei.ttf`, `KaiTi.ttf`
 
-如果使用 texstudio 编辑器，可以使用下面的命令进行编译和查看（在选项 Build 页面卡中 Build & View 进行修改）：
+## IDE 配置
+
+### Visual Studio Code
+
+1. 安装插件 LaTeX Workshop
+2. 在左侧的插件页面中，选择 Build LaTeX project 中的 Recipe: latexmk (latexmkrc)
+
+### TeXstudio
+
+1. 将选项的 Build 页面卡中 Build & View 的一项修改为：
 
 ```
 latexmk -silent -synctex=1 % | txs:///view-pdf
 ```
 
+2. 选择编译并查看
