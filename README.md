@@ -11,6 +11,16 @@
 1. 从 http://www.tug.org/mactex/ 下载并安装 MacTeX。
 2. 从 https://fontzone.net/ 下载并安装中文字体。所需要的字体文件有：`simsun.ttf`, `simfang.ttf`, `simhei.ttf`, `KaiTi.ttf`
 
+## 编译命令
+
+在终端下，输入命令：
+
+```shell
+# 切换工作目录
+cd pku-grad-thesis
+latexmk
+```
+
 ## IDE 配置
 
 ### Visual Studio Code
