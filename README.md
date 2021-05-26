@@ -22,6 +22,12 @@ cd pku-grad-thesis
 latexmk
 ```
 
+清理编译产生的中间文件：
+
+```
+latexmk -c
+```
+
 ## IDE 配置
 
 ### Visual Studio Code
