@@ -24,6 +24,10 @@
 % 改用 style = gb7714-2015 并去掉之后两选项，详见 biblatex-gb7714-2015 的文档。
 \usepackage[backend = biber, style = caspervector, utf8, sorting = none]{biblatex}
 
+% 在此处添加需要的 packages
+\usepackage{multirow}
+\usepackage{float}
+
 % 对于 linespread 值的计算过程有兴趣的同学可以参考 pkuthss.cls。
 \renewcommand*{\bibfont}{\zihao{5}\linespread{1.27}\selectfont}
 % 按学校要求设定参考文献列表的段间距。
@@ -81,6 +85,10 @@
 	\pagestyle{empty}
 	% 自动生成封面。
 	\ifblind\makeblind\else\maketitle\fi
+
+	% 论文导师评阅表
+	\include{chap/sheet}
+
 	% 版权声明。封面要求单面打印，故须新开右页。
 	\cleardoublepage
 	\include{chap/copy}
