@@ -377,17 +377,15 @@
 				\linespread{1.6}\selectfont{\label@ctitle}
 			}
 			\titlelabel
-			{%中文标题
-				\zihao{2}\bfseries\kaishu% 楷体二号加粗
-				\thss@int@fillinblank{1}{0.64\textwidth}
-					{\@ctitle}% troubleshoot: 楷体加粗不起作用
-			}
-		    \\* \vspace{4mm}
-		    \hphantom{\titlelabel}%占位符
-			{%英文标题
-				\zihao{3}\bfseries
-				\thss@int@fillinblank{1}{0.64\textwidth}
-					{\@etitle}
+			{
+				\thss@int@fillinblank
+					{3} % 标题行数
+					{0.64\textwidth}
+					{
+						{\zihao{2}\bfseries\kaishu\@ctitle}%中文标题，楷体二号加粗
+						\\ % 换行
+						{\zihao{3}\bfseries\@etitle}%英文标题
+					}
 			}
 		}
 		\vfill
