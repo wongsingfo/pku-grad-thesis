@@ -450,12 +450,12 @@
 % Typeset the English abstract.
 \newenvironment{eabstract}{%
 	\thss@int@pdfmark{\eabstractname}{eabstract}
-	\chapter*{\sffamily\@etitle}\markboth{\eabstractname}{}
-	\begin{center}
-		{\@eauthor} ({\@emajor})\\
-		{\label@ementor}{\@ementor}\\[2em]
-		\textbf{\sffamily\eabstractname}
-	\end{center}\par%
+	\chapter*{\bfseries\eabstractname}\markboth{\eabstractname}{}
+	% \begin{center}
+	% 	{\@eauthor} ({\@emajor})\\
+	% 	{\label@ementor}{\@ementor}\\[2em]
+	% 	\textbf{\sffamily\eabstractname}
+	% \end{center}\par%
 }{% Keywords at the bottom of the page.
 	\vfill\noindent\textbf{\label@ekeywords}{\@ekeywords}%
 }
