@@ -6,10 +6,10 @@
 
 ## 编译配置
 
-### MacOS
-
-1. 从 http://www.tug.org/mactex/ 下载并安装 MacTeX。
-2. 从 https://fontzone.net/ 下载并安装中文字体。所需要的字体文件有：`simsun.ttf`, `simfang.ttf`, `simhei.ttf`, `KaiTi.ttf`
+1. 从 https://fontzone.net/ 下载并安装中文字体。所需要的字体文件有：`simsun.ttf`, `simfang.ttf` (搜关键词 fangsong), `simhei.ttf`, `KaiTi.ttf`。字体安装完成后可能要重启一下系统。
+1. 安装 Latex
+  - MacOS: 从 http://www.tug.org/mactex/ 下载并安装 MacTeX。
+  - Windows: 从 https://www.tug.org/texlive/ 下载并安装 Texlive-full.
 
 ## 编译命令
 
